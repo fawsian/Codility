@@ -1,5 +1,7 @@
 /*
 * @author     Fawzi Aiboud Nygren 2021
+* @sdk        Java 8
+* @time       7 minutes
 * @return     amount of times frog has to jump
 */
 
