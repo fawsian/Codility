@@ -50,30 +50,29 @@ Write an efficient algorithm for the following assumptions:
 class Solution {
     public int solution(int[] A) {
 
-        int first = 0;
-        int second = 0;
-        int sum = 0;
-        int abs = 0;
-        int min = 0;
+      int first = 0;
+      int second = 0;
+      int sum = 0;
+      int abs = 0;
+      int min = 0;
 
-        for (int i = 0; i < A.length; i++) {
-            sum += A[i];
-        }
+      for (int i = 0; i < A.length; i++) {
+        sum += A[i];
+      }
+
+      for (int i = 0; i < A.length-1; i++) {
+
+        first += A[i];
+        second = (first-sum) * -1;      // Can't use abs here, or negative numbers won't work
+        abs = Math.abs(first-second);
+
+        if (i == 0) {
+            min = abs;
+        } 
+        min = Math.min(min, abs);
         
-        for (int i = 0; i < A.length-1; i++) {
-            
-            first += A[i];
-            second = (first-sum) * -1;      // Can't use abs here, or negative numbers won't work
-            abs = Math.abs(first-second);
-            
-            if (i == 0) {
-                min = abs;
-            } else if (abs < min) {
-                min = abs;
-            }
-
-        }        
-        return min;
+      }        
+      return min;
     }
 }
 
