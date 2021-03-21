@@ -69,8 +69,7 @@ class Solution {
         if (i == 0) {
             min = abs;
         } 
-        min = Math.min(min, abs);
-        
+        min = Math.min(min, abs);      
       }        
       return min;
     }
