@@ -34,7 +34,7 @@ import java.util.*;
 
 class Solution {
     public int solution(int[] A) {
-        
+
         Arrays.sort(A);
 
         if ((A.length == 0) || (A[0] != 1)){        // Safeguard [], [2,3] etc
