@@ -2,9 +2,10 @@
 * @author     Fawzi Aiboud Nygren 2021
 * @jdk        Java 8
 * @time       O(N) or O(N * log(N))
-* @return     amount of times frog has to jump
+* @return     missing unique element in given array
 
-An array A consisting of N different integers is given. The array contains integers in the range [1..(N + 1)], which means that exactly one element is missing.
+An array A consisting of N different integers is given. The array contains
+integers in the range [1..(N + 1)], which means that exactly one element is missing.
 
 Your goal is to find that missing element.
 
@@ -27,8 +28,6 @@ Write an efficient algorithm for the following assumptions:
         N is an integer within the range [0..100,000];
         the elements of A are all distinct;
         each element of array A is an integer within the range [1..(N + 1)].
-
-
 */
 
 import java.util.*;
@@ -40,9 +39,7 @@ class Solution {
 
         if ((A.length == 0) || (A[0] != 1)){        // Safeguard [], [2,3] etc
             return 1;
-        }
-
-        if (A.length == 1) {                        // Safeguard single element 
+        } else if (A.length == 1) {                 // Safeguard single element 
             return A[0] + 1;
         }
 
@@ -55,6 +52,5 @@ class Solution {
         }
 
         return 0;
-
     }
 }
