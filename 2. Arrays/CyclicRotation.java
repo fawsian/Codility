@@ -2,7 +2,7 @@
 * @author     Fawzi Aiboud Nygren 2021
 * @jdk        Java 8
 * @time       N/A
-* @return     array, rotated K times 
+* @return     array, rotated right K times 
 
 An array A consisting of N integers is given. Rotation of the array
 means that each element is shifted right by one index, and the last
@@ -56,8 +56,8 @@ import java.util.*;
 class Solution {
     public int[] solution(int[] A, int K) {
 
-        if (A.length == 0) {            // Safeguard [] (empty array)
-            return A;
+        if (A == null) {            // Safeguard [] (empty array)
+            return null;
         }
         
         int last = 0;
